@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IPL 2026 - Book Tickets</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar linking back to index.html -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h2>IPL Ticket Portal</h2>
+      </div>
+      <ul>
+        <li><a href="index.html#schedule">Matches</a></li>
+        <li><a href="booking.html">Book Ticket</a></li>
+        <li><a href="index.html#my-bookings">My Bookings</a></li>
+        <li><a href="index.html#guidelines">Guidelines</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="booking-section">
+      <h2>Match Ticket Reservation</h2>
+      <p>Please enter your information accurately. All fields marked with * are required.</p>
+
+      <form action="#" method="post">
+        <!-- Personal Information -->
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div>
+            <label for="fullName">Full Name *</label>
+            <input 
+              type="text" 
+              id="fullName" 
+              name="fullName" 
+              placeholder="e.g. Rahul Sharma" 
+              required 
+              minlength="3" 
+              maxlength="50"
+            >
+          </div>
+
+          <div>
+            <label for="userEmail">Email Address *</label>
+            <input 
+              type="email" 
+              id="userEmail" 
+              name="userEmail" 
+              placeholder="name@domain.com" 
+              required
+            >
+          </div>
+
+          <div>
+            <label for="userPhone">Mobile Number * (10 digits)</label>
+            <input 
+              type="tel" 
+              id="userPhone" 
+              name="userPhone" 
+              placeholder="9876543210" 
+              required 
+              minlength="10" 
+              maxlength="10" 
+              pattern="[0-9]{10}"
+            >
+          </div>
+        </fieldset>
+
+        <!-- Match & Stand Selection -->
+        <fieldset>
+          <legend>Match &amp; Seating</legend>
+
+          <div>
+            <label for="matchSelect">Select Match *</label>
+            <select id="matchSelect" name="matchSelect" required>
+              <option value="">-- Choose an upcoming fixture --</option>
+              <option value="match01">Match 01: RCB vs CSK (Bengaluru)</option>
+              <option value="match02">Match 02: MI vs KKR (Mumbai)</option>
+              <option value="match03">Match 03: GT vs RCB (Ahmedabad)</option>
+              <option value="match04">Match 04: CSK vs DC (Chennai)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="standSelect">Stand Category *</label>
+            <select id="standSelect" name="standSelect" required>
+              <option value="">-- Choose seating category --</option>
+              <option value="general">General (₹1,200)</option>
+              <option value="premium">Premium (₹3,500)</option>
+              <option value="vip">VIP Hospitality (₹8,000)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="ticketQty">Number of Tickets * (Max 6 per user)</label>
+            <input 
+              type="number" 
+              id="ticketQty" 
+              name="ticketQty" 
+              min="1" 
+              max="6" 
+              value="1" 
+              required
+            >
+          </div>
+        </fieldset>
+
+        <!-- Booking Preferences (Radio & Checkboxes) -->
+        <fieldset>
+          <legend>Delivery &amp; Add-on Preferences</legend>
+
+          <div>
+            <label>Ticket Delivery Mode *</label>
+            <div>
+              <label>
+                <input type="radio" name="deliveryMode" value="digital" required checked> Digital E-Ticket (QR via Email)
+              </label>
+              <label>
+                <input type="radio" name="deliveryMode" value="box-office"> Stadium Box Office Pickup
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label>Additional Services</label>
+            <div>
+              <label>
+                <input type="checkbox" name="addons" value="parking"> Stadium Vehicle Parking Pass (+₹300)
+              </label>
+              <label>
+                <input type="checkbox" name="addons" value="merch"> Official Fan Jersey Combo (+₹1,499)
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label>
+              <input type="checkbox" name="terms" required> I agree to the stadium guidelines and ticketing terms *
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- Submit and Reset Actions -->
+        <div>
+          <button type="submit">Confirm &amp; Proceed to Pay</button>
+          <button type="reset">Reset Form</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Indian Premier League Ticketing Portal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

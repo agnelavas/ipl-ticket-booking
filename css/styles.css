@@ -1,22 +1,23 @@
 /* =========================================================
-   1. CSS Variables (Website Theme)
+   1. CSS Variables (Muted Plum, Lilac & Velvet Maroon)
    ========================================================= */
 :root {
-  --primary-color: #0b1e36;     /* Deep navy blue */
-  --accent-color: #f5a623;      /* Stadium gold */
-  --accent-hover: #d98e16;      /* Darker gold for interaction */
-  --secondary-blue: #1d3557;   /* Complementary mid-tone blue */
-  --bg-color: #f4f6f9;         /* Neutral light background */
-  --card-bg: #ffffff;          /* Pure white card backgrounds */
-  --text-primary: #1e293b;     /* Slate dark text */
-  --text-muted: #64748b;       /* Subtle gray text */
-  --border-color: #e2e8f0;     /* Clean border tone */
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 10px 25px rgba(11, 30, 54, 0.15);
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
+  --primary-color: #4a1525;     /* Deep velvet maroon / wine */
+  --secondary-color: #6b2d42;   /* Soft warm plum */
+  --accent-color: #9d7a97;      /* Muted dusty lilac */
+  --accent-hover: #835f7d;      /* Deeper lilac for hover states */
+  --accent-light: #f3ebf2;      /* Pale whisper lilac for highlights */
+  --bg-color: #faf7f9;         /* Very soft rose-tinted off-white */
+  --card-bg: #ffffff;          /* Pure crisp white */
+  --text-primary: #2d1c24;     /* Deep espresso plum (softer than black) */
+  --text-muted: #735d67;       /* Soft heather grey */
+  --border-color: #ebdce4;     /* Delicate blush-lilac border */
+  --shadow-sm: 0 2px 6px rgba(74, 21, 37, 0.04);
+  --shadow-md: 0 6px 18px rgba(74, 21, 37, 0.07);
+  --shadow-lg: 0 12px 30px rgba(74, 21, 37, 0.1);
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
 }
 
 /* =========================================================
@@ -36,12 +37,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-primary);
-  line-height: 1.6;
-  padding-top: 75px; /* Offset for fixed navbar */
+  line-height: 1.65;
+  padding-top: 75px;
 }
 
 /* =========================================================
-   3. Navigation Bar (Fixed Position, White Text, Hover Effects)
+   3. Navigation Bar
    ========================================================= */
 header {
   position: fixed;
@@ -49,8 +50,9 @@ header {
   left: 0;
   width: 100%;
   height: 75px;
-  background-color: var(--primary-color);
-  box-shadow: var(--shadow-md);
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -58,7 +60,7 @@ header {
 
 nav {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -66,9 +68,9 @@ nav {
 }
 
 nav .logo h2 {
-  color: var(--accent-color);
-  font-size: 1.4rem;
-  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  letter-spacing: -0.2px;
   font-weight: 700;
 }
 
@@ -79,17 +81,17 @@ nav ul {
 }
 
 nav ul li a {
-  color: #ffffff;
+  color: var(--secondary-color);
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
   position: relative;
   padding-bottom: 4px;
 }
 
 nav ul li a:hover {
-  color: var(--accent-color);
+  color: var(--primary-color);
 }
 
 nav ul li a::after {
@@ -100,6 +102,7 @@ nav ul li a::after {
   width: 0%;
   height: 2px;
   background-color: var(--accent-color);
+  border-radius: 2px;
   transition: width 0.25s ease;
 }
 
@@ -108,93 +111,93 @@ nav ul li a:hover::after {
 }
 
 /* =========================================================
-   4. Banner (Hero) Section (Gradient, Centered, Styled Buttons)
+   4. Banner (Hero) Section
    ========================================================= */
 #hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-blue) 100%);
-  color: #ffffff;
-  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f7eff4 0%, #ebe0e8 100%);
+  color: var(--primary-color);
+  padding: 4.5rem 2rem;
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 1100px;
   border-radius: var(--radius-lg);
   text-align: center;
-  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
 }
 
 #hero h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 2.2rem;
+  font-weight: 700;
   letter-spacing: -0.5px;
   margin-bottom: 0.8rem;
-  color: #ffffff;
+  color: var(--primary-color);
 }
 
 #hero p {
-  font-size: 1.2rem;
-  color: #cbd5e1;
-  max-width: 600px;
-  margin: 0 auto 2.2rem auto;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 0 auto 2rem auto;
 }
 
 #hero div {
   display: flex;
   justify-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 #hero button {
-  padding: 0.85rem 1.8rem;
-  font-size: 1rem;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
   font-weight: 600;
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: var(--shadow-sm);
 }
 
 #hero a:first-child button {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  border: 2px solid var(--accent-color);
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: 1px solid var(--primary-color);
 }
 
 #hero a:first-child button:hover {
-  background-color: var(--accent-hover);
-  border-color: var(--accent-hover);
-  transform: translateY(-2px);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-1px);
 }
 
 #hero a:last-child button {
-  background-color: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
 }
 
 #hero a:last-child button:hover {
-  background-color: #ffffff;
-  color: var(--primary-color);
-  transform: translateY(-2px);
+  background-color: var(--accent-light);
+  transform: translateY(-1px);
 }
 
 /* =========================================================
    5. Content Wrapper & Headings
    ========================================================= */
 main {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3.5rem;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: var(--primary-color);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   position: relative;
   display: inline-block;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.4rem;
 }
 
 h2::after {
@@ -202,8 +205,8 @@ h2::after {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 45px;
-  height: 4px;
+  width: 36px;
+  height: 3px;
   background-color: var(--accent-color);
   border-radius: 2px;
 }
@@ -214,17 +217,17 @@ h2::after {
 #about {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 
 #about h2 {
   grid-column: 1 / -1;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 #about article {
   background-color: var(--card-bg);
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
@@ -232,30 +235,31 @@ h2::after {
 }
 
 #about article:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 #about article h3 {
-  font-size: 1.25rem;
-  color: var(--secondary-blue);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
 #about article ul {
-  padding-left: 1.4rem;
+  padding-left: 1.2rem;
   color: var(--text-muted);
 }
 
 #about article li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.45rem;
 }
 
 /* =========================================================
-   7. Filter Controls & Schedule Table
+   7. Match Schedule Table
    ========================================================= */
 .filter-controls {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -264,17 +268,17 @@ h2::after {
 .filter-controls label {
   font-weight: 600;
   font-size: 0.95rem;
-  color: var(--text-primary);
+  color: var(--primary-color);
 }
 
 .filter-controls select {
-  padding: 0.55rem 1rem;
+  padding: 0.5rem 0.9rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
   background-color: var(--card-bg);
   outline: none;
-  cursor: pointer;
 }
 
 table {
@@ -283,34 +287,33 @@ table {
   background-color: var(--card-bg);
   border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   border: 1px solid var(--border-color);
 }
 
 thead {
-  background-color: var(--primary-color);
-  color: #ffffff;
+  background-color: var(--accent-light);
 }
 
 th, td {
-  padding: 1.1rem 1.2rem;
+  padding: 1rem 1.2rem;
   text-align: left;
 }
 
 th {
   font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
   font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.3px;
 }
 
 tbody tr {
   border-bottom: 1px solid var(--border-color);
-  transition: background-color 0.2s ease;
+  transition: background-color 0.15s ease;
 }
 
 tbody tr:hover {
-  background-color: #f8fafc;
+  background-color: #faf5f8;
 }
 
 tbody tr:last-child {
@@ -318,24 +321,25 @@ tbody tr:last-child {
 }
 
 table button {
-  background-color: var(--secondary-blue);
-  color: #ffffff;
-  border: none;
-  padding: 0.5rem 1.1rem;
+  background-color: var(--accent-light);
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  padding: 0.45rem 1rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
   font-weight: 600;
   font-size: 0.85rem;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 table button:hover {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #ffffff;
 }
 
 /* =========================================================
-   8. Booking Form & Summary Card Layout
+   8. Booking Form & Summary Card
    ========================================================= */
 .booking-container {
   display: grid;
@@ -348,19 +352,19 @@ form fieldset {
   border: 1px solid var(--border-color);
   background-color: var(--card-bg);
   border-radius: var(--radius-md);
-  padding: 2.2rem;
-  box-shadow: var(--shadow-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
 }
 
 legend {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-color);
-  font-size: 1.1rem;
-  padding: 0 0.6rem;
+  font-size: 1.05rem;
+  padding: 0 0.5rem;
 }
 
 form div {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.2rem;
   display: flex;
   flex-direction: column;
 }
@@ -368,89 +372,91 @@ form div {
 form label {
   font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 0.4rem;
-  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+  color: var(--primary-color);
 }
 
 form input, 
 form select {
-  padding: 0.75rem 0.9rem;
+  padding: 0.7rem 0.85rem;
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   font-size: 0.95rem;
   outline: none;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  background-color: #ffffff;
+  background-color: #faf7f9;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
 form input:focus, 
 form select:focus {
-  border-color: var(--secondary-blue);
-  box-shadow: 0 0 0 3px rgba(29, 53, 87, 0.1);
+  background-color: #ffffff;
+  border-color: var(--secondary-color);
 }
 
 form button[type="submit"] {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: #ffffff;
   border: none;
-  padding: 0.9rem;
+  padding: 0.85rem;
   border-radius: var(--radius-sm);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
   cursor: pointer;
   margin-top: 0.5rem;
-  box-shadow: var(--shadow-sm);
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 form button[type="submit"]:hover {
-  background-color: var(--accent-hover);
+  background-color: var(--secondary-color);
   transform: translateY(-1px);
 }
 
 .booking-summary-card {
   background-color: var(--card-bg);
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .booking-summary-card h3 {
   color: var(--primary-color);
-  font-size: 1.25rem;
-  margin-bottom: 1.4rem;
-  border-bottom: 2px solid var(--bg-color);
-  padding-bottom: 0.6rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
 }
 
 .booking-summary-card p {
-  font-size: 0.95rem;
-  margin-bottom: 0.9rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
   display: flex;
   justify-content: space-between;
+  color: var(--text-primary);
 }
 
 .booking-summary-card hr {
   border: none;
   border-top: 1px dashed var(--border-color);
-  margin: 1.4rem 0;
+  margin: 1.2rem 0;
 }
 
 /* =========================================================
-   9. Match Day Guidelines Cards
+   9. Guidelines Cards
    ========================================================= */
 .guidelines-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.8rem;
+  gap: 1.5rem;
 }
 
 .card {
   background-color: var(--card-bg);
-  padding: 2rem;
+  padding: 1.8rem;
   border-radius: var(--radius-md);
-  border-top: 4px solid var(--accent-color);
+  border-top: 3px solid var(--accent-color);
   box-shadow: var(--shadow-sm);
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
@@ -459,31 +465,33 @@ form button[type="submit"]:hover {
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
 .card h3 {
   color: var(--primary-color);
-  font-size: 1.15rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
 }
 
 .card p {
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /* =========================================================
    10. Footer
    ========================================================= */
 footer {
-  background-color: var(--primary-color);
-  color: #94a3b8;
+  background-color: #ffffff;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
   text-align: center;
-  padding: 2.2rem 1.5rem;
-  font-size: 0.9rem;
-  margin-top: 4rem;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+  margin-top: 3.5rem;
 }
 
 /* =========================================================
@@ -500,6 +508,38 @@ footer {
   }
 
   #hero h1 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
+}
+
+/* =========================================================
+   12. Toast Notification (Activity 5)
+   ========================================================= */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-sm);
+  border-left: 4px solid var(--accent-color);
+  box-shadow: var(--shadow-lg);
+  font-size: 0.92rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
 }
