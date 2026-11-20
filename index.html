@@ -101,7 +101,7 @@
             <td>₹1,200</td>
             <td>₹3,500</td>
             <td>₹8,000</td>
-            <td><a href="booking.html"><button type="button">Book</button></a></td>
+            <td><a href="#book-tickets"><button type="button">Book</button></a></td>
           </tr>
           <tr>
             <td>Match 02</td>
@@ -111,7 +111,7 @@
             <td>₹1,000</td>
             <td>₹3,000</td>
             <td>₹7,500</td>
-            <td><a href="booking.html"><button type="button">Book</button></a></td>
+            <td><a href="#book-tickets"><button type="button">Book</button></a></td>
           </tr>
           <tr>
             <td>Match 03</td>
@@ -121,7 +121,7 @@
             <td>₹800</td>
             <td>₹2,500</td>
             <td>₹6,000</td>
-            <td><a href="booking.html"><button type="button">Book</button></a></td>
+            <td><a href="#book-tickets"><button type="button">Book</button></a></td>
           </tr>
         </tbody>
       </table>
@@ -183,15 +183,15 @@
           </fieldset>
         </form>
 
-        <!-- Booking Summary Card -->
+        <!-- Booking Summary Card (Updated for Activity 7 Live DOM Updates) -->
         <aside class="booking-summary-card">
           <h3>Booking Summary</h3>
-          <p><strong>Selected Match:</strong> Match 01: RCB vs CSK</p>
-          <p><strong>Stand:</strong> General Stand (East Lower)</p>
-          <p><strong>Ticket Price:</strong> ₹1,200</p>
-          <p><strong>Quantity:</strong> 2</p>
+          <p><strong>Selected Match:</strong> <span id="summary-match">Not selected</span></p>
+          <p><strong>Stand:</strong> <span id="summary-stand">Not selected</span></p>
+          <p><strong>Ticket Price:</strong> <span id="summary-price">₹0</span></p>
+          <p><strong>Quantity:</strong> <span id="summary-qty">1</span></p>
           <hr>
-          <p><strong>Total Amount:</strong> ₹2,400</p>
+          <p><strong>Total Amount:</strong> <span id="summary-total">₹0</span></p>
         </aside>
       </div>
     </section>
@@ -250,6 +250,9 @@
   <footer>
     <p>&copy; 2026 Indian Premier League Ticketing Portal. All rights reserved.</p>
   </footer>
+
+  <!-- Link JavaScript -->
+  <script src="js/app.js"></script>
 
 </body>
 </html>
